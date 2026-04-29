@@ -32,3 +32,12 @@ For Multiple Monitors: If you have multiple monitors, the script will set the sa
 ```bash
 go build -ldflags="-s -w -H=windowsgui" wallpaperChanger.go
 ```
+
+## Installation with Go & Task Scheduler
+
+1. Clone this repository to a location of your choice, for example `C:\tools\Wallpaper-Changer`.
+1. Download or build the Go script and place the executable in the same directory as the `install.ps1` script.
+1. Run the `install.ps1` script with administrator privileges.
+
+The `install.ps1` script will automatically create a scheduled task that runs the wallpaper changer executable every time you lock your computer. You can verify the task was created successfully by opening Task Scheduler and looking for a task named "Change Wallpaper on Lock".
+Additionally, you can easily modify the Task after creation in Task Scheduler to change the trigger or other settings as needed.
